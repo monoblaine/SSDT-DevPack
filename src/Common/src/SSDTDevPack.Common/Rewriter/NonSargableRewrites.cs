@@ -97,7 +97,7 @@ namespace SSDTDevPack.Rewriter
             if (bce.FirstExpression is FunctionCall)
             {
                 var func = bce.FirstExpression as FunctionCall;
-                if (func.FunctionName.Value.ToLower() == "isnull")
+                if (func.FunctionName.Value.ToLowerInvariant() == "isnull")
                 {
                     haveIsNull = true;
                     isNull = func;
@@ -107,7 +107,7 @@ namespace SSDTDevPack.Rewriter
             if (bce.SecondExpression is FunctionCall)
             {
                 var func = bce.SecondExpression as FunctionCall;
-                if (func.FunctionName.Value.ToLower() == "isnull")
+                if (func.FunctionName.Value.ToLowerInvariant() == "isnull")
                 {
                     haveIsNull = true;
                     isNull = func;

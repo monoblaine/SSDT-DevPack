@@ -46,7 +46,7 @@ namespace SSDTDevPack.Formatting
                     continue;
 
                 if (IsKeyword(t))
-                    builder.Append(t.Text.ToLower());
+                    builder.Append(t.Text.ToLowerInvariant());
                 else
                     builder.Append(t.Text);
                 
